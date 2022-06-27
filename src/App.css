@@ -1,0 +1,55 @@
+
+form{
+  justify-content: center;
+  height:fit-content;
+}
+.container{
+  background-color: rgba(148, 150, 146, 0.747);
+  margin-bottom: 50px !important;
+}
+h2,h1{
+  color: azure;
+  font-family:monospace;
+}
+.search{
+  width: 50vh;
+}
+.form-label{
+  color: azure;
+  font-family:monospace;
+}
+.navbar{
+  background-color: #eed2ee;
+}
+.card-title{
+  width: auto;
+} 
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.btn-primary, .btn-primary:hover, .btn-primary:active, .btn-primary:visited{
+  background-color: #8064A2 !important;
+  
+}
+.btn-block{
+  width: 10vw !important;
+  align-items: center;
+}
+
+@container-tablet:            ((720px + @grid-gutter-width));
+
+
+@container-desktop:           ((940px + @grid-gutter-width));
+
+
+@container-lg-desktop:        ((1020px + @grid-gutter-width));
+
+
