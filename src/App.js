@@ -14,7 +14,7 @@ import Signup from './Components/Signup';
 import Login from './Components/Login';
 import Alert from './Components/Alert';
 import React, { useState } from 'react';
-import background from "./img/laura-chouette-u9zMfQexlwk-unsplash.jpg";
+import background from "./img/Hashtag.png";
 
 
 
@@ -34,10 +34,10 @@ function App() {
 
   return (
     <div style={{
-    backgroundImage: `url(${background})`,
-    backgroundRepeat: 'repeat-y',
-    width:'100vw',
-    backgroundSize: 'cover' }} >
+      backgroundImage: `url(${background})`,
+      backgroundRepeat: 'repeat-y',
+      width:'100vw',
+      backgroundSize: 'cover' }} >
 
       <NoteState>
         <Router>
