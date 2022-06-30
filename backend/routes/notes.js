@@ -183,7 +183,7 @@ router.put('/pullike/:id', fetchuser, async (req, res) => {
             return res.status(404).send("Not Found");
         }
      
-            console.log('liked1');
+            
             note = await Note.findByIdAndUpdate(req.params.id, { $pull: { like: req.user.id }});
             res.json(note);
     }
