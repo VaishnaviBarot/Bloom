@@ -1,12 +1,34 @@
-
+@import url('https://fonts.googleapis.com/css2?family=Staatliches&display=swap');
+ 
+.interview,.share, .title, .desc{
+  font-family: 'Staatliches', cursive;
+}
 form{
   justify-content: center;
   height:fit-content;
 }
 .container{
   background-color: rgba(148, 150, 146, 0.747);
-  margin-bottom: 50px !important;
+  /* margin-bottom: 50px !important; */
 
+}
+.allint{
+  height: 83vh !important;
+}
+
+.carddiv{
+  height: 80vh !important;
+  overflow-y: auto !important;
+}
+
+.allcard{
+  height: 50vh !important;
+  overflow-y: auto !important;
+}
+
+.card{
+  overflow-y: auto !important;
+  height: 150px !important;
 }
 h2,h1{
   color: azure;
@@ -14,6 +36,7 @@ h2,h1{
 }
 .search{
   width: 50vh;
+  padding: auto !important;
 }
 .form-label{
   color: azure;

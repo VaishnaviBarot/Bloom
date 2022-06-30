@@ -3,7 +3,7 @@ import React from 'react'
 export const About = () => {
     return (
         <div className="">
-            <h1 className="my-3 text-center" >About Us</h1>
+            <h1 className="my-3 text-center share" >About Us</h1>
             <div className="accordion" id="accordionExample">
                 <div className="accordion-item">
                     <h2 className="accordion-header" id="headingOne">

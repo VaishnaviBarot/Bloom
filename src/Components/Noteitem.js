@@ -29,7 +29,7 @@ const Noteitem = (props) => {
             ></i>
             </div>
           </div>
-          <p className="card-text">{note.description}</p>
+          <p className="card-text overflow-auto">{note.description}</p>
         </div>
       </div>
     </div>

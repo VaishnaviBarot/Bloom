@@ -88,6 +88,7 @@ const NoteState = (props) => {
         }
         setNotes(newNotes);
     }
+
     const searchHandle= async (event)=>{
         let key=event.target.value;
         if(key){
@@ -106,8 +107,23 @@ const NoteState = (props) => {
             getAllNotes();
         }
       }
+
+
+
+      const putlike = async (id, event) => {
+        // API Call 
+        const response = await fetch(`${host}/api/notes/putlike/${id}`, {
+            method: 'PUT',
+            headers: {
+                'Content-Type': 'application/json',
+                "auth-token": localStorage.getItem('token')
+            },
+        });
+    }
+
+
     return (
-        <NoteContext.Provider value={{ notes, addNote, deleteNote, editNote, getNotes, getAllNotes, searchHandle}}>
+        <NoteContext.Provider value={{ notes, addNote, deleteNote, editNote, getNotes, getAllNotes, searchHandle, putlike}}>
             {props.children}
         </NoteContext.Provider>
     )

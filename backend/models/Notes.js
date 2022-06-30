@@ -28,8 +28,8 @@ const NotesSchema = new Schema({
         default: Date.now
     },
 
-    like: {
-        type: Number,
+    like: { 
+        type: Array,
         ref: 'user',
     }
     

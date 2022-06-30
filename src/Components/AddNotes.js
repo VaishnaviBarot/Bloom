@@ -21,14 +21,14 @@ const AddNotes = (props) => {
 
     return (
         <div className="">
-            <h2 className='p-3 mx-auto'>Share your Experience</h2>
+            <h2 className='p-3 mx-auto share'>Share your Experience</h2>
             <form className="my-3 form-horizontal">
                 <div className="mb-3">
-                    <label htmlFor="title" className="form-label">Title</label>
+                    <label htmlFor="title" className="form-label title">Title</label>
                     <input type="text" className="form-control col-lg-9" id="title" name="title" aria-describedby="emailHelp" value={note.title} onChange={onChange} minLength={5} required />
                 </div>
                 <div className="mb-3">
-                    <label htmlFor="description" className="form-label" >Description</label>
+                    <label htmlFor="description" className="form-label desc" >Description</label>
                     <textarea className="form-control" rows={5} cols={5} id="description" name="description" value={note.description} onChange={onChange} minLength={5} required />
                 </div>
                 <div className="mb-3">

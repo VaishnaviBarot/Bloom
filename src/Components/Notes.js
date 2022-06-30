@@ -77,9 +77,9 @@ const Notes = (props) => {
                 </div>
             </div>
 
-            <div className="row mx-2">
-                <h2>Your Posts</h2>
-                <div className="mx-2">
+            <div className="row carddiv mx-2">
+                <h2 className='share'>Your Posts</h2>
+                <div className="mx-2 ">
                     {notes.length === 0 && 'No experiences added'}
                 </div>
                 {notes.map((note) => {
