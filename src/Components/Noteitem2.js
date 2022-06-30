@@ -2,12 +2,13 @@ import React , {useState,useContext} from "react";
 import { Button} from 'react-bootstrap';
 import { Modal} from 'react-bootstrap';
 import noteContext from "../Context/Notes/NoteContext"
+import {FaRegThumbsUp,FaRegThumbsDown} from "react-icons/fa";
 
 const Noteitem2 = (props) => {
 const { note, see } = props;
 const [show, setShow] = useState(false);
 const context = useContext(noteContext);
-const { putlike } = context;
+const { putlike, pulllike } = context;
 
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
@@ -31,13 +32,19 @@ const { putlike } = context;
         <Modal.Body>{note.description}</Modal.Body>
         <Modal.Footer>
         <button className="btn btn-primary">{note.like.length}</button>
-        <i
-              className="far fa-trash-alt mx-2 p-1"
+        <FaRegThumbsUp
+              className=""
               onClick={() => {
                 putlike(note._id);
                 // props.showAlert("Liked", "success");
+              }}/>
+            <FaRegThumbsDown
+              className=""
+              onClick={() => {
+                pulllike(note._id);
+                // props.showAlert("Liked", "success");
               }}
-            ></i>
+            />
           <Button variant="secondary" onClick={handleClose}>
             Close
           </Button>

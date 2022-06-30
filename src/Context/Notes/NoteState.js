@@ -110,7 +110,7 @@ const NoteState = (props) => {
 
 
 
-      const putlike = async (id, event) => {
+    const putlike = async (id, event) => {
         // API Call 
         const response = await fetch(`${host}/api/notes/putlike/${id}`, {
             method: 'PUT',
@@ -119,11 +119,24 @@ const NoteState = (props) => {
                 "auth-token": localStorage.getItem('token')
             },
         });
+        getAllNotes();
+    }
+    const pulllike = async (id, event) => {
+        // API Call 
+        const response = await fetch(`${host}/api/notes/pullike/${id}`, {
+            method: 'PUT',
+            headers: {
+                'Content-Type': 'application/json',
+                "auth-token": localStorage.getItem('token')
+            },
+        });
+        getAllNotes();
+        
     }
 
 
     return (
-        <NoteContext.Provider value={{ notes, addNote, deleteNote, editNote, getNotes, getAllNotes, searchHandle, putlike}}>
+        <NoteContext.Provider value={{ notes, addNote, deleteNote, editNote, getNotes, getAllNotes, searchHandle, putlike, pulllike}}>
             {props.children}
         </NoteContext.Provider>
     )

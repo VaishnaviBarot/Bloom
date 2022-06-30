@@ -31,6 +31,8 @@ const NotesSchema = new Schema({
     like: { 
         type: Array,
         ref: 'user',
+        unique: true,
+        default: null,
     }
     
 });

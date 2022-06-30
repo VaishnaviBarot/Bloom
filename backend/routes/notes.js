@@ -160,18 +160,11 @@ router.get("/search/:key", async (req, res) => {
         if (!note) {
             return res.status(404).send("Not Found");
         }
-
         // if (note.user.toString() !== req.user.id) {
         //     return res.status(401).send("Not Allowed");
         // }
-        let user = await Note.find({ like : {$elemMatch : req.user.id} } );
-        if(!user){
-        note = await Note.findByIdAndUpdate(req.params.id, { $push: { like: req.user.id } });
+        note = await Note.findByIdAndUpdate(req.params.id, { $addToSet: { like: req.user.id } });
         res.json(note);
-        }
-        else{
-            console.error("alreay liked");
-        }
     }
     catch (error) {
         console.error(error.message);
@@ -179,6 +172,30 @@ router.get("/search/:key", async (req, res) => {
     }
 
 })
+
+router.put('/pullike/:id', fetchuser, async (req, res) => {
+
+
+    try {
+        //Find the note to be updated and update it
+        let note = await Note.findById(req.params.id);
+        if (!note) {
+            return res.status(404).send("Not Found");
+        }
+     
+            console.log('liked1');
+            note = await Note.findByIdAndUpdate(req.params.id, { $pull: { like: req.user.id }});
+            res.json(note);
+    }
+    catch (error) {
+        console.error(error.message);
+        res.status(500).send("Interval Server Error.");
+    }
+
+})
+
+
+
 
 
 
