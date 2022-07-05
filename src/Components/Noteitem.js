@@ -12,7 +12,7 @@ const Noteitem = (props) => {
         <div className="card-body flex-fill">
           <div className="d-flex align-items-center align-self-stretch">
           <h5 className="card-title align-self-stretch flex-grow-1">{note.title}</h5>
-          <div div class="card-header d-flex justify-content-end">
+          <div div class="card-header rounded-2 bg-gradient-warning shadow d-flex justify-content-end">
           
             <i
               className="far fa-trash-alt mx-2 p-1"

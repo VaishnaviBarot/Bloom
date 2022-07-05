@@ -18,7 +18,7 @@ const { putlike, pulllike } = context;
       <div className="card">
         <div className="card-body flex-fill">
           <div className="d-flex align-items-center align-self-stretch">
-          <h5 className="card-title align-self-stretch flex-grow-1">{note.title}<span className="badge badge-primary rounded-circle bg-success text-center">{note.like.length}</span></h5>
+          <h5 className="card-title align-self-stretch flex-grow-1">{note.title}<span className="badge badge-primary rounded-circle bg-warning m-1 text-center">{note.like.length}</span></h5>
           <Button variant="primary" onClick={handleShow}>
         Read More
       </Button>

@@ -17,6 +17,7 @@ const NoteState = (props) => {
                 "auth-token": localStorage.getItem('token')
             }
         });
+        
         const json = await response.json()
         setNotes(json)
     }
@@ -119,6 +120,7 @@ const NoteState = (props) => {
                 "auth-token": localStorage.getItem('token')
             },
         });
+        const json = response.json();
         getAllNotes();
     }
     const pulllike = async (id, event) => {

@@ -40,7 +40,7 @@ router.post('/addnote', fetchuser, [
 router.get('/fetchallnotes', async (req, res) => {
 
     try {
-        const notes = await Note.find();
+        const notes = await Note.find().sort({date : -1});
         res.json(notes);
     }
     catch (error) {
@@ -151,7 +151,7 @@ router.get("/search/:key", async (req, res) => {
   });
 
 
-  router.put('/putlike/:id', fetchuser, async (req, res) => {
+  router.put('/putlike/:id', fetchuser,async (req, res) => {
 
 
     try {
@@ -160,8 +160,8 @@ router.get("/search/:key", async (req, res) => {
         if (!note) {
             return res.status(404).send("Not Found");
         }
-        // if (note.user.toString() !== req.user.id) {
-        //     return res.status(401).send("Not Allowed");
+        //  if (!req.user) {
+        //      return res.redirect('../../auth/login');
         // }
         note = await Note.findByIdAndUpdate(req.params.id, { $addToSet: { like: req.user.id } });
         res.json(note);
@@ -193,26 +193,5 @@ router.put('/pullike/:id', fetchuser, async (req, res) => {
     }
 
 })
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 module.exports = router;
