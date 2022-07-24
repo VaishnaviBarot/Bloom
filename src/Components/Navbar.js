@@ -1,5 +1,7 @@
 import React from 'react'
 import { Link, useLocation, useNavigate } from "react-router-dom";
+import  logo  from "../img/graphic6.png";
+import '../App.css';
 
 export const Navbar = () => {
     let location = useLocation();
@@ -13,7 +15,7 @@ export const Navbar = () => {
     return (
         <nav className="navbar navbar-expand-lg sticky-top navbar-light bg-light">
             <div className="container-fluid">
-                <Link className="navbar-brand" to="/">Bloom</Link>
+                <Link className="navbar-brand"to="/"><img className='logo' src={logo} alt="logo"/></Link>
                 <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span className="navbar-toggler-icon"></span>
                 </button>

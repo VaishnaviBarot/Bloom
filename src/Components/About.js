@@ -26,7 +26,7 @@ export const About = () => {
                     </h2>
                     <div id="collapseTwo" className="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
                         <div className="accordion-body">
-                            NoteitDown is a free platform that provides sharing and viewing of interview experiences of others.
+                            Bloom is a free platform that provides sharing and viewing of interview experiences of others.
                         </div>
                     </div>
                 </div>
@@ -43,7 +43,21 @@ export const About = () => {
                         </div>
                     </div>
                 </div>
-             
+                <div className="accordion-item">
+                    <h2 className="accordion-header" id="headingFour">
+                        <button className="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="true" aria-controls="collapseFour">
+                            <strong>Developers</strong>
+                        </button>
+                    </h2>
+                    <div id="collapseFour" className="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#accordionExample">
+                        <div className="accordion-body">
+                            <p>Vaishnavi Barot</p>
+                            <p>Bhavika Balasra</p>
+
+                        </div>
+                    </div>
+                </div>
+             <div></div>
               
             </div>
             <div className=''>
@@ -51,9 +65,7 @@ export const About = () => {
                 </br>
                 <br>
                 </br>
-           
-                
-            </div>
+        </div>
         </div>
     )
 }
