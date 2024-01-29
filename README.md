@@ -6,9 +6,6 @@ Bloom is a web application designed to provide a platform for individuals to sha
 - [Features](#features)
 - [Technologies Used](#technologies-used)
 - [Installation](#installation)
-- [Usage](#usage)
-- [Contributing](#contributing)
-- [License](#license)
 
 ## Features
 
@@ -70,7 +67,7 @@ Bloom is a web application designed to provide a platform for individuals to sha
    cd ../backend
    npm start
    ```
-4. Usage
+4. Usage  
    Open your web browser and go to http://localhost:3000 to access the Bloom web application. 
 
 
