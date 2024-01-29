@@ -1,70 +1,77 @@
-# Getting Started with Create React App
+# Bloom: Interview Experience Sharing Blog
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Bloom is a web application designed to provide a platform for individuals to share their interview experiences. Whether you're a job seeker preparing for an interview or a seasoned professional looking to give back by sharing your insights, Bloom is the place to connect and learn from each other's experiences.
 
-## Available Scripts
+## Table of Contents
+- [Features](#features)
+- [Technologies Used](#technologies-used)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Contributing](#contributing)
+- [License](#license)
 
-In the project directory, you can run:
+## Features
 
-### `npm start`
+1. **User Authentication:**
+   - Secure user authentication system using JWT (JSON Web Tokens).
+   - User registration and login functionality.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+2. **Interview Experience Submission:**
+   - Users can submit their interview experiences, including details such as company name, position, interview questions, and overall experience.
+   - Rich text editor for formatting and enhancing the content.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+3. **Search and Filter:**
+   - Users can search for interview experiences based on keywords, company names, or job positions.
+   - Filter functionality to refine search results.
 
-### `npm test`
+4. **Commenting and Rating:**
+   - Users can comment on and rate the interview experiences shared by others.
+   - A rating system to highlight valuable insights.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+5. **Responsive Design:**
+   - The website is designed to be responsive, ensuring a seamless experience across various devices.
 
-### `npm run build`
+6. **User Profiles:**
+   - Users have profiles where they can view and manage their submitted interview experiences.
+   - Profile picture upload functionality.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Technologies Used
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- **Frontend:**
+  - ReactJS - A JavaScript library for building user interfaces.
+  - Bootstrap - A front-end framework for responsive and mobile-first web development.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- **Backend:**
+  - Node.js - A JavaScript runtime for building server-side applications.
+  - Express - A fast, unopinionated, minimalist web framework for Node.js.
+  - MongoDB - A NoSQL database for storing and retrieving interview experiences.
 
-### `npm run eject`
+- **Authentication:**
+  - JSON Web Tokens (JWT) - A compact, URL-safe means of representing claims between two parties.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Installation
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/your-username/bloom.git
+   cd bloom
+2. Install Dependencies
+   ```bash
+   cd frontend
+   npm install
+   cd ../backend
+   npm install
+   ```
+3. Run the Application
+   ```bash
+   cd ../frontend
+   npm start
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+   cd ../backend
+   npm start
+   ```
+4. Usage
+   Open your web browser and go to http://localhost:3000 to access the Bloom web application. 
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+   
